@@ -1562,9 +1562,7 @@ button:focus {
 		padding: 0 15px;
 	}
 	
-		
 }
-
 
 @media (max-width: 640px){
 
@@ -2174,4 +2172,28 @@ button:focus {
 @font-face {
 	font-family: 'Akashi';
 	src: url('assets/fonts/akashi.ttf');
+}
+
+.button_github {
+	padding: 10px 20px;
+	background-color: rgb(254, 144, 75); /* 设置按钮背景色为橙色 */
+	color: white; /* 设置按钮文字颜色为白色 */
+	text-decoration: none; /* 去除链接的下划线 */
+	border: 3px solid rgb(254, 144, 75);
+	border-radius: 5px; /* 设置按钮的边角为圆角 */
+	font-size: 16px; /* 设置文字大小 */
+	text-align: center; /* 按钮内文字居中显示 */
+	display: inline-block; /* 使链接的布局表现为块级元素 */
+}
+
+.button_docs {
+	padding: 10px 20px;
+	background-color: rgb(255, 255, 255); /* 设置按钮背景色为橙色 */
+	color: rgb(254, 144, 75); /* 设置按钮文字颜色为白色 */
+	text-decoration: none; /* 去除链接的下划线 */
+	border: 3px solid rgb(254, 144, 75);
+	border-radius: 5px; /* 设置按钮的边角为圆角 */
+	font-size: 16px; /* 设置文字大小 */
+	text-align: center; /* 按钮内文字居中显示 */
+	display: inline-block; /* 使链接的布局表现为块级元素 */
 }
