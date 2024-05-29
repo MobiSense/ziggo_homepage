@@ -2197,3 +2197,107 @@ button:focus {
 	text-align: center; /* 按钮内文字居中显示 */
 	display: inline-block; /* 使链接的布局表现为块级元素 */
 }
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+  }
+  
+  .responsive-image {
+	width: 100%;
+	max-width: 300px;
+	height: 200px;
+	object-fit: contain; /* 确保图片内容以封面形式填充，不变形 */
+  }
+  
+  figure {
+	text-align: center;
+	width: 300px;      /* 限定figure元素的宽度与图片一致 */
+  }
+  
+  figcaption {
+	color: black;
+	font-size: 14px;
+	margin-top: 8px;
+	font-weight: bold;
+  }
+
+
+.content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* 在较宽屏幕上元素之间保持间距 */
+  }
+  
+  .image-container,
+  .video-container {
+	flex: 1 1 48%; /* 允许两个容器在较宽屏幕上各占一半宽度 */
+	margin: 10px; /* 添加一些间隙 */
+  }
+  
+  .img-rounded {
+	width: 100%;
+	height: auto;
+  }
+  
+  .embed-responsive {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 的宽高比 */
+	height: 0;
+	overflow: hidden;
+  }
+  
+  .embed-responsive iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+  /* 媒体查询，针对屏幕宽度小于768px的设备应用 */
+  @media (max-width: 768px) {
+	.container {
+	  padding: 20px; /* 减少内边距以获得更多空间 */
+	}
+  
+	.content-wrapper {
+	  flex-direction: column; /* 在小屏幕设备上垂直排列 */
+	}
+	
+	.image-container{
+		flex-basis: 100%; /* 在小屏幕上让每个容器占满整个宽度 */
+		margin: 0 0 60px 0; /* 调整间距以避免挤压，尤其是底部间隔 */
+	}
+	
+	.video-container {
+	  flex-basis: 100%; /* 在小屏幕上让每个容器占满整个宽度 */
+	  margin: 0 0 160px 0; /* 调整间距以避免挤压，尤其是底部间隔 */
+	}
+  
+	.embed-responsive {
+	  padding-bottom: 56.25%; /* 保持16:9的宽高比，确保iframe不会挤压 */
+	}
+
+	.content-container {
+		flex-direction: column; /* 在小屏幕设备上垂直排列 */
+	  }
+	  
+	  .text-container, .image-container {
+		flex-basis: 100%; /* 在小屏幕上让每个容器占满整个宽度 */
+	  }
+	  .comp-table-domain, .comp-table-domain tbody, .comp-table-domain tr {
+		width: 100%; /* 设置表格、表格行和表格体为全宽 */
+		display: block; /* 转换为块级元素 */
+		overflow: hidden; /* 避免内容溢出 */
+	  }
+	
+	  .comp-table-domain th {
+		display: block; /* 单元格也转换为块级元素 */
+		width: 100%!important; /* 重要性提高，确保覆盖所有其他宽度设置 */
+		box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+		padding: 20px; /* 添加一些内边距，美观且提高可读性 */
+	  }
+  }
